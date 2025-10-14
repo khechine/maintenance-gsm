@@ -1,0 +1,56 @@
+{
+ "cards": [
+  {
+   "card_name": "Repairs This Month",
+   "docstatus": 0,
+   "doctype": "Number Card",
+   "filters_json": "[]",
+   "function": "Count",
+   "is_public": 1,
+   "is_standard": 1,
+   "label": "Réparations ce mois",
+   "module": "Maintenance GSM",
+   "name": "Repairs This Month",
+   "owner": "Administrator",
+   "report_name": "",
+   "show_percentage_stats": 1,
+   "stats_time_interval": "Monthly",
+   "type": "Document Type",
+   "document_type": "Reception Appareil",
+   "filters": [
+    {
+     "field": "date_reception",
+     "operator": "Between",
+     "value": [
+      "2023-01-01",
+      "2023-12-31"
+     ]
+    }
+   ]
+  }
+ ],
+ "charts": [
+  {
+   "chart_name": "Repairs by Status",
+   "label": "Réparations par statut"
+  }
+ ],
+ "creation": "2023-01-01 00:00:00.000000",
+ "dashboard_name": "Atelier - Overview",
+ "docstatus": 0,
+ "doctype": "Dashboard",
+ "for_user": "",
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "modified": "2023-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Maintenance GSM",
+ "name": "Atelier - Overview",
+ "owner": "Administrator",
+ "roles": [
+  {
+   "role": "Chef Atelier"
+  }
+ ]
+}

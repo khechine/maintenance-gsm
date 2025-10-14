@@ -1,0 +1,45 @@
+{
+ "docstatus": 0,
+ "doctype": "Workflow",
+ "is_active": 1,
+ "modified": "2023-01-01 00:00:00.000000",
+ "name": "Ordre Reparation Workflow",
+ "owner": "Administrator",
+ "states": [
+  {
+   "doc_status": "Draft",
+   "is_optional_state": 0,
+   "state": "En cours",
+   "style": "Primary"
+  },
+  {
+   "doc_status": "Submitted",
+   "is_optional_state": 0,
+   "state": "Termin\u00e9",
+   "style": "Success"
+  },
+  {
+   "doc_status": "Submitted",
+   "is_optional_state": 0,
+   "state": "Factur\u00e9",
+   "style": "Info"
+  }
+ ],
+ "transitions": [
+  {
+   "action": "Terminer r\u00e9paration",
+   "allowed": "Technicien",
+   "next_state": "Termin\u00e9",
+   "state": "En cours"
+  },
+  {
+   "action": "Facturer",
+   "allowed": "Chef Atelier",
+   "next_state": "Factur\u00e9",
+   "state": "Termin\u00e9"
+  }
+ ],
+ "workflow_name": "Ordre Reparation Workflow",
+ "workflow_state_field": "statut",
+ "document_type": "Ordre Reparation"
+}

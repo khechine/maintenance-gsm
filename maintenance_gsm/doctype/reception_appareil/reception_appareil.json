@@ -1,0 +1,188 @@
+{
+ "actions": [],
+ "allow_copy": 0,
+ "allow_events_in_timeline": 0,
+ "allow_guest_to_view": 0,
+ "allow_import": 0,
+ "allow_rename": 0,
+ "autoname": "field:reference_qr",
+ "creation": "2023-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "document_type": "",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "client",
+  "marque",
+  "modele",
+  "imei",
+  "probleme_declare",
+  "accessoires_fournis",
+  "statut",
+  "technicien_assign\u00e9",
+  "date_reception",
+  "reference_qr",
+  "code_barre",
+  "attachments"
+ ],
+ "fields": [
+  {
+   "fieldname": "client",
+   "fieldtype": "Link",
+   "in_list_view": 0,
+   "label": "Client",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "marque",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Marque",
+   "options": "Apple\nSamsung\nXiaomi\nHuawei\nAutre"
+  },
+  {
+   "fieldname": "modele",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Mod\u00e8le"
+  },
+  {
+   "fieldname": "imei",
+   "fieldtype": "Data",
+   "in_list_view": 0,
+   "label": "IMEI"
+  },
+  {
+   "fieldname": "probleme_declare",
+   "fieldtype": "Small Text",
+   "in_list_view": 0,
+   "label": "Probl\u00e8me d\u00e9clar\u00e9"
+  },
+  {
+   "fieldname": "accessoires_fournis",
+   "fieldtype": "Small Text",
+   "in_list_view": 0,
+   "label": "Accessoires fournis"
+  },
+  {
+   "fieldname": "statut",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Statut",
+   "options": "En attente\nEn diagnostic\nEn r\u00e9paration\nEn attente de pi\u00e8ces\nTermin\u00e9\nLivr\u00e9",
+   "default": "En attente"
+  },
+  {
+   "fieldname": "technicien_assign\u00e9",
+   "fieldtype": "Link",
+   "in_list_view": 0,
+   "label": "Technicien assign\u00e9",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "date_reception",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Date de r\u00e9ception",
+   "default": "Now"
+  },
+  {
+   "fieldname": "reference_qr",
+   "fieldtype": "Data",
+   "in_list_view": 0,
+   "label": "R\u00e9f\u00e9rence QR",
+   "read_only": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "code_barre",
+   "fieldtype": "Barcode",
+   "in_list_view": 0,
+   "label": "Code Barre",
+   "read_only": 1
+  },
+  {
+   "fieldname": "attachments",
+   "fieldtype": "Attach",
+   "in_list_view": 0,
+   "label": "Attachments"
+  }
+ ],
+ "has_web_view": 0,
+ "hide_toolbar": 0,
+ "idx": 0,
+ "image_field": "",
+ "in_create": 0,
+ "is_submittable": 0,
+ "issingle": 0,
+ "istable": 0,
+ "max_attachments": 0,
+ "modified": "2023-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Maintenance GSM",
+ "name": "Reception Appareil",
+ "naming_rule": "",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 0,
+   "email": 0,
+   "export": 0,
+   "print": 0,
+   "read": 1,
+   "report": 0,
+   "role": "Receptionniste",
+   "share": 0,
+   "write": 1
+  },
+  {
+   "create": 0,
+   "delete": 0,
+   "email": 0,
+   "export": 0,
+   "print": 0,
+   "read": 1,
+   "report": 1,
+   "role": "Technicien",
+   "share": 0,
+   "write": 0
+  },
+  {
+   "create": 0,
+   "delete": 0,
+   "email": 0,
+   "export": 0,
+   "print": 0,
+   "read": 1,
+   "report": 1,
+   "role": "Chef Atelier",
+   "share": 0,
+   "write": 1
+  },
+  {
+   "create": 0,
+   "delete": 0,
+   "email": 0,
+   "export": 0,
+   "print": 0,
+   "read": 1,
+   "report": 0,
+   "role": "Comptable",
+   "share": 0,
+   "write": 0
+  }
+ ],
+ "quick_entry": 0,
+ "read_only": 0,
+ "read_only_onload": 0,
+ "search_fields": "client,marque,modele,statut",
+ "show_name_in_global_search": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "reference_qr",
+ "track_changes": 1,
+ "track_seen": 0,
+ "track_views": 0
+}

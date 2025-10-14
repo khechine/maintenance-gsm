@@ -1,0 +1,145 @@
+{
+ "actions": [],
+ "allow_copy": 0,
+ "allow_events_in_timeline": 0,
+ "allow_guest_to_view": 0,
+ "allow_import": 0,
+ "allow_rename": 0,
+ "autoname": "field:diagnostic",
+ "creation": "2023-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "document_type": "",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "diagnostic",
+  "pieces_utilisees",
+  "cout_main_oeuvre",
+  "duree_reparation_heures",
+  "statut",
+  "date_debut",
+  "date_fin",
+  "sales_invoice"
+ ],
+ "fields": [
+  {
+   "fieldname": "diagnostic",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Diagnostic",
+   "options": "Diagnostic Technique",
+   "reqd": 1
+  },
+  {
+   "fieldname": "pieces_utilisees",
+   "fieldtype": "Table",
+   "in_list_view": 0,
+   "label": "Pi\u00e8ces utilis\u00e9es",
+   "options": "Piece Usage"
+  },
+  {
+   "fieldname": "cout_main_oeuvre",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Co\u00fbt main d'\u0153uvre"
+  },
+  {
+   "fieldname": "duree_reparation_heures",
+   "fieldtype": "Float",
+   "in_list_view": 0,
+   "label": "Dur\u00e9e r\u00e9paration heures"
+  },
+  {
+   "fieldname": "statut",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Statut",
+   "options": "En cours\nTermin\u00e9\nFactur\u00e9",
+   "default": "En cours"
+  },
+  {
+   "fieldname": "date_debut",
+   "fieldtype": "Datetime",
+   "in_list_view": 0,
+   "label": "Date d\u00e9but",
+   "default": "Now"
+  },
+  {
+   "fieldname": "date_fin",
+   "fieldtype": "Datetime",
+   "in_list_view": 0,
+   "label": "Date fin"
+  },
+  {
+   "fieldname": "sales_invoice",
+   "fieldtype": "Link",
+   "in_list_view": 0,
+   "label": "Facture vente",
+   "options": "Sales Invoice"
+  }
+ ],
+ "has_web_view": 0,
+ "hide_toolbar": 0,
+ "idx": 0,
+ "image_field": "",
+ "in_create": 0,
+ "is_submittable": 1,
+ "issingle": 0,
+ "istable": 0,
+ "max_attachments": 0,
+ "modified": "2023-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Maintenance GSM",
+ "name": "Ordre Reparation",
+ "naming_rule": "",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 0,
+   "email": 0,
+   "export": 0,
+   "print": 0,
+   "read": 1,
+   "report": 0,
+   "role": "Technicien",
+   "share": 0,
+   "write": 1
+  },
+  {
+   "create": 0,
+   "delete": 0,
+   "email": 0,
+   "export": 0,
+   "print": 0,
+   "read": 1,
+   "report": 1,
+   "role": "Chef Atelier",
+   "share": 0,
+   "write": 1
+  },
+  {
+   "create": 0,
+   "delete": 0,
+   "email": 0,
+   "export": 0,
+   "print": 0,
+   "read": 1,
+   "report": 0,
+   "role": "Comptable",
+   "share": 0,
+   "write": 1
+  }
+ ],
+ "quick_entry": 0,
+ "read_only": 0,
+ "read_only_onload": 0,
+ "search_fields": "diagnostic,statut",
+ "show_name_in_global_search": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "diagnostic",
+ "track_changes": 1,
+ "track_seen": 0,
+ "track_views": 0
+}

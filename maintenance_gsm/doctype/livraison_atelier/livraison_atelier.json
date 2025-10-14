@@ -1,0 +1,110 @@
+{
+ "actions": [],
+ "allow_copy": 0,
+ "allow_events_in_timeline": 0,
+ "allow_guest_to_view": 0,
+ "allow_import": 0,
+ "allow_rename": 0,
+ "autoname": "field:ordre_reparation",
+ "creation": "2023-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "document_type": "",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "ordre_reparation",
+  "date_sortie",
+  "livre_par",
+  "signature_client",
+  "remarques"
+ ],
+ "fields": [
+  {
+   "fieldname": "ordre_reparation",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Ordre de r\u00e9paration",
+   "options": "Ordre Reparation",
+   "reqd": 1
+  },
+  {
+   "fieldname": "date_sortie",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Date de sortie",
+   "default": "Now"
+  },
+  {
+   "fieldname": "livre_par",
+   "fieldtype": "Link",
+   "in_list_view": 0,
+   "label": "Livré par",
+   "options": "Employee",
+   "default": "frappe.session.user"
+  },
+  {
+   "fieldname": "signature_client",
+   "fieldtype": "Signature",
+   "in_list_view": 0,
+   "label": "Signature client"
+  },
+  {
+   "fieldname": "remarques",
+   "fieldtype": "Small Text",
+   "in_list_view": 0,
+   "label": "Remarques"
+  }
+ ],
+ "has_web_view": 0,
+ "hide_toolbar": 0,
+ "idx": 0,
+ "image_field": "",
+ "in_create": 0,
+ "is_submittable": 1,
+ "issingle": 0,
+ "istable": 0,
+ "max_attachments": 0,
+ "modified": "2023-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Maintenance GSM",
+ "name": "Livraison Atelier",
+ "naming_rule": "",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 0,
+   "email": 0,
+   "export": 0,
+   "print": 0,
+   "read": 1,
+   "report": 0,
+   "role": "Receptionniste",
+   "share": 0,
+   "write": 1
+  },
+  {
+   "create": 0,
+   "delete": 0,
+   "email": 0,
+   "export": 0,
+   "print": 0,
+   "read": 1,
+   "report": 1,
+   "role": "Chef Atelier",
+   "share": 0,
+   "write": 1
+  }
+ ],
+ "quick_entry": 0,
+ "read_only": 0,
+ "read_only_onload": 0,
+ "search_fields": "ordre_reparation,date_sortie",
+ "show_name_in_global_search": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "ordre_reparation",
+ "track_changes": 1,
+ "track_seen": 0,
+ "track_views": 0
+}

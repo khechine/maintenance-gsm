@@ -1,0 +1,32 @@
+{
+ "chart_name": "Repairs by Status",
+ "chart_type": "Donut",
+ "doctype": "Reception Appareil",
+ "filters_json": "[]",
+ "group_by_type": "Count",
+ "group_by_based_on": "statut",
+ "is_public": 1,
+ "is_standard": 1,
+ "module": "Maintenance GSM",
+ "name": "Repairs by Status",
+ "number_of_groups": 0,
+ "owner": "Administrator",
+ "report_description": "",
+ "report_name": "",
+ "report_type": "Report Builder",
+ "roles": [
+  {
+   "role": "Chef Atelier"
+  },
+  {
+   "role": "Technicien"
+  }
+ ],
+ "timeseries": 0,
+ "type": "Donut",
+ "use_report_chart": 0,
+ "x_field": "",
+ "y_axis": [],
+ "y_field": "",
+ "y_fields": []
+}

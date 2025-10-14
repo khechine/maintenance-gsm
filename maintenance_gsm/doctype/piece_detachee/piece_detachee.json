@@ -1,0 +1,141 @@
+{
+ "actions": [],
+ "allow_copy": 0,
+ "allow_events_in_timeline": 0,
+ "allow_guest_to_view": 0,
+ "allow_import": 0,
+ "allow_rename": 0,
+ "autoname": "field:piece_code",
+ "creation": "2023-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "document_type": "",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "piece_code",
+  "nom",
+  "categorie",
+  "prix_achat",
+  "prix_vente",
+  "stock_interne",
+  "linked_item_code",
+  "fournisseur"
+ ],
+ "fields": [
+  {
+   "fieldname": "piece_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Code pi\u00e8ce",
+   "unique": 1
+  },
+  {
+   "fieldname": "nom",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nom"
+  },
+  {
+   "fieldname": "categorie",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Cat\u00e9gorie",
+   "options": "\u00c9cran\nBatterie\nCarte m\u00e8re\nCam\u00e9ra\nConnecteur\nAutre"
+  },
+  {
+   "fieldname": "prix_achat",
+   "fieldtype": "Currency",
+   "in_list_view": 0,
+   "label": "Prix d'achat"
+  },
+  {
+   "fieldname": "prix_vente",
+   "fieldtype": "Currency",
+   "in_list_view": 0,
+   "label": "Prix de vente"
+  },
+  {
+   "fieldname": "stock_interne",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Stock interne"
+  },
+  {
+   "fieldname": "linked_item_code",
+   "fieldtype": "Data",
+   "in_list_view": 0,
+   "label": "Code article li\u00e9"
+  },
+  {
+   "fieldname": "fournisseur",
+   "fieldtype": "Link",
+   "in_list_view": 0,
+   "label": "Fournisseur",
+   "options": "Supplier"
+  }
+ ],
+ "has_web_view": 0,
+ "hide_toolbar": 0,
+ "idx": 0,
+ "image_field": "",
+ "in_create": 0,
+ "is_submittable": 0,
+ "issingle": 0,
+ "istable": 0,
+ "max_attachments": 0,
+ "modified": "2023-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Maintenance GSM",
+ "name": "Piece Detachee",
+ "naming_rule": "",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 0,
+   "email": 0,
+   "export": 0,
+   "print": 0,
+   "read": 1,
+   "report": 1,
+   "role": "Chef Atelier",
+   "share": 0,
+   "write": 1
+  },
+  {
+   "create": 0,
+   "delete": 0,
+   "email": 0,
+   "export": 0,
+   "print": 0,
+   "read": 1,
+   "report": 1,
+   "role": "Technicien",
+   "share": 0,
+   "write": 0
+  },
+  {
+   "create": 0,
+   "delete": 0,
+   "email": 0,
+   "export": 0,
+   "print": 0,
+   "read": 1,
+   "report": 0,
+   "role": "Comptable",
+   "share": 0,
+   "write": 0
+  }
+ ],
+ "quick_entry": 0,
+ "read_only": 0,
+ "read_only_onload": 0,
+ "search_fields": "piece_code,nom,categorie",
+ "show_name_in_global_search": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "nom",
+ "track_changes": 1,
+ "track_seen": 0,
+ "track_views": 0
+}

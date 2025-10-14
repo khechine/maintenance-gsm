@@ -1,0 +1,31 @@
+{
+ "channel": "Email",
+ "condition": "doc.statut in [\"En diagnostic\", \"Termin\u00e9\", \"Livr\u00e9\"]",
+ "creation": "2023-01-01 00:00:00.000000",
+ "date_changed": "statut",
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Reception Appareil",
+ "enabled": 1,
+ "event": "Value Change",
+ "idx": 0,
+ "is_standard": 0,
+ "message": "Cher {{ doc.client }},\n\nLe statut de votre r\u00e9paration (R\u00e9f: {{ doc.reference_qr }}) a \u00e9t\u00e9 mis \u00e0 jour vers : {{ doc.statut }}.\n\nD\u00e9tails:\n- Marque: {{ doc.marque }}\n- Mod\u00e8le: {{ doc.modele }}\n- IMEI: {{ doc.imei }}\n- Probl\u00e8me: {{ doc.probleme_declare }}\n\nSi vous avez des questions, contactez-nous.\n\nCordialement,\nMaintenance GSM",
+ "modified": "2023-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Maintenance GSM",
+ "name": "Reception Status Change",
+ "owner": "Administrator",
+ "recipients": [
+  {
+   "receiver_by_document_field": "client"
+  }
+ ],
+ "send_system_notification": 1,
+ "send_to_all_assignees": 0,
+ "sender": null,
+ "sender_email": "noreply@maintenancegsm.com",
+ "set_property_after_alert": null,
+ "slack_webhook_url": null,
+ "subject": "Mise \u00e0 jour du statut de votre r\u00e9paration - R\u00e9f: {{ doc.reference_qr }}"
+}

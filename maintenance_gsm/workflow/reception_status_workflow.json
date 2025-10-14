@@ -1,0 +1,87 @@
+{
+ "docstatus": 0,
+ "doctype": "Workflow",
+ "is_active": 1,
+ "modified": "2023-01-01 00:00:00.000000",
+ "name": "Reception Status Workflow",
+ "owner": "Administrator",
+ "states": [
+  {
+   "doc_status": "Draft",
+   "is_optional_state": 0,
+   "state": "En attente",
+   "style": "Primary"
+  },
+  {
+   "doc_status": "Draft",
+   "is_optional_state": 0,
+   "state": "En diagnostic",
+   "style": "Info"
+  },
+  {
+   "doc_status": "Draft",
+   "is_optional_state": 0,
+   "state": "En r\u00e9paration",
+   "style": "Warning"
+  },
+  {
+   "doc_status": "Draft",
+   "is_optional_state": 0,
+   "state": "En attente de pi\u00e8ces",
+   "style": "Danger"
+  },
+  {
+   "doc_status": "Submitted",
+   "is_optional_state": 0,
+   "state": "Termin\u00e9",
+   "style": "Success"
+  },
+  {
+   "doc_status": "Submitted",
+   "is_optional_state": 0,
+   "state": "Livr\u00e9",
+   "style": "Secondary"
+  }
+ ],
+ "transitions": [
+  {
+   "action": "Commencer diagnostic",
+   "allowed": "Technicien",
+   "next_state": "En diagnostic",
+   "state": "En attente"
+  },
+  {
+   "action": "D\u00e9marrer r\u00e9paration",
+   "allowed": "Chef Atelier",
+   "next_state": "En r\u00e9paration",
+   "state": "En diagnostic"
+  },
+  {
+   "action": "En attente de pi\u00e8ces",
+   "allowed": "Chef Atelier",
+   "next_state": "En attente de pi\u00e8ces",
+   "state": "En r\u00e9paration"
+  },
+  {
+   "action": "Pi\u00e8ces arriv\u00e9es",
+   "allowed": "Chef Atelier",
+   "next_state": "En r\u00e9paration",
+   "state": "En attente de pi\u00e8ces"
+  },
+  {
+   "action": "Terminer",
+   "allowed": "Chef Atelier",
+   "next_state": "Termin\u00e9",
+   "state": "En r\u00e9paration"
+  },
+  {
+   "action": "Livrer",
+   "allowed": "Receptionniste",
+   "next_state": "Livr\u00e9",
+   "state": "Termin\u00e9"
+  }
+ ],
+ "workflow_name": "Reception Status Workflow",
+ "workflow_state_field": "statut",
+ "document_type": "Reception Appareil"
+}
