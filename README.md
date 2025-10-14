@@ -23,7 +23,7 @@ A complete ERPNext app for managing mobile phone repair workshops.
 
 1. **Get the app**:
    ```bash
-   bench get-app maintenance_gsm https://github.com/your-repo/maintenance_gsm.git
+   bench get-app maintenance_gsm https://github.com/khechine/maintenance-gsm.git
    ```
 
 2. **Install on site**:
