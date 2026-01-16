@@ -1,0 +1,87 @@
+{
+    "actions": [],
+    "allow_copy": 0,
+    "allow_events_in_timeline": 0,
+    "allow_guest_to_view": 0,
+    "allow_import": 0,
+    "allow_rename": 0,
+    "autoname": "DIAG-.#####",
+    "creation": "2026-01-16 21:00:00.000000",
+    "doctype": "DocType",
+    "document_type": "",
+    "editable_grid": 1,
+    "engine": "InnoDB",
+    "field_order": [
+        "repair_order",
+        "symptoms",
+        "root_cause",
+        "severity",
+        "estimated_time",
+        "created_by"
+    ],
+    "fields": [
+        {
+            "fieldname": "repair_order",
+            "fieldtype": "Link",
+            "in_list_view": 1,
+            "label": "Ordre de r\u00e9paration",
+            "options": "Repair Order",
+            "reqd": 1
+        },
+        {
+            "fieldname": "symptoms",
+            "fieldtype": "Text",
+            "label": "Sympt\u00f4mes"
+        },
+        {
+            "fieldname": "root_cause",
+            "fieldtype": "Text",
+            "label": "Cause racine"
+        },
+        {
+            "fieldname": "severity",
+            "fieldtype": "Select",
+            "in_list_view": 1,
+            "label": "Gravit\u00e9",
+            "options": "Low\nMedium\nCritical",
+            "default": "Medium"
+        },
+        {
+            "fieldname": "estimated_time",
+            "fieldtype": "Duration",
+            "label": "Temps estim\u00e9"
+        },
+        {
+            "fieldname": "created_by",
+            "fieldtype": "Link",
+            "label": "Cr\u00e9\u00e9 par",
+            "options": "User",
+            "default": "Session User"
+        }
+    ],
+    "index_web_pages_for_search": 1,
+    "links": [],
+    "modified": "2026-01-16 21:00:00.000000",
+    "modified_by": "Administrator",
+    "module": "Maintenance GSM",
+    "name": "Technical Diagnostic",
+    "naming_rule": "Expression (old style)",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "System Manager",
+            "share": 1,
+            "write": 1
+        }
+    ],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "track_changes": 1
+}

@@ -1,0 +1,97 @@
+{
+ "actions": [],
+ "allow_copy": 0,
+ "allow_events_in_timeline": 0,
+ "allow_guest_to_view": 0,
+ "allow_import": 0,
+ "allow_rename": 0,
+ "autoname": "field:imei",
+ "creation": "2026-01-16 21:00:00.000000",
+ "doctype": "DocType",
+ "document_type": "",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "imei",
+  "brand",
+  "model",
+  "customer",
+  "reception_date",
+  "physical_condition",
+  "status"
+ ],
+ "fields": [
+  {
+   "fieldname": "imei",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "IMEI",
+   "unique": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "brand",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Marque",
+   "options": "Apple\nSamsung\nHuawei\nXiaomi\nOppo\nVivo\nRealme\nMotorola\nNokia\nSony\nLG\nPixel\nAutre"
+  },
+  {
+   "fieldname": "model",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Mod\u00e8le"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Client",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "reception_date",
+   "fieldtype": "Date",
+   "label": "Date de r\u00e9ception",
+   "default": "Today"
+  },
+  {
+   "fieldname": "physical_condition",
+   "fieldtype": "Text",
+   "label": "\u00c9tat physique"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Statut",
+   "options": "Re\u00e7u\nEn r\u00e9paration\nPr\u00eat\nLivr\u00e9",
+   "default": "Re\u00e7u"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-01-16 21:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Maintenance GSM",
+ "name": "Appareil",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

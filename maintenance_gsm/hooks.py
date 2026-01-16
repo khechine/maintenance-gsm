@@ -30,11 +30,12 @@ app_license = "MIT"
 
 # include js in doctype views
 doctype_js = {
-    "Reception Appareil": "public/js/reception_appareil.js",
-    "Diagnostic Technique": "public/js/diagnostic_technique.js",
-    "Ordre Reparation": "public/js/ordre_reparation.js"
+    "Appareil": "public/js/appareil.js",
+    "Repair Order": "public/js/repair_order.js",
+    "Technical Diagnostic": "public/js/technical_diagnostic.js",
+    "Repair Quotation": "public/js/repair_quotation.js"
 }
-doctype_list_js = {"Reception Appareil": "public/js/reception_appareil_list.js"}
+doctype_list_js = {"Appareil": "public/js/appareil_list.js"}
 doctype_tree_js = {}
 doctype_calendar_js = {}
 
@@ -112,21 +113,6 @@ doctype_calendar_js = {}
 # Hook on document methods and events
 
 doc_events = {
-    "Reception Appareil": {
-        "on_submit": "maintenance_gsm.maintenance_gsm.doctype.reception_appareil.reception_appareil.ReceptionAppareil.send_notification"
-    },
-    "Diagnostic Technique": {
-        "on_update": "maintenance_gsm.maintenance_gsm.doctype.diagnostic_technique.diagnostic_technique.DiagnosticTechnique.update_reception_status",
-        "on_update": "maintenance_gsm.maintenance_gsm.doctype.diagnostic_technique.diagnostic_technique.DiagnosticTechnique.create_ordre_reparation_if_not_exists"
-    },
-    "Ordre Reparation": {
-        "on_update": "maintenance_gsm.maintenance_gsm.doctype.ordre_reparation.ordre_reparation.OrdreReparation.create_sales_invoice",
-        "on_update": "maintenance_gsm.maintenance_gsm.doctype.ordre_reparation.ordre_reparation.OrdreReparation.update_reception_status",
-        "before_submit": "maintenance_gsm.maintenance_gsm.doctype.ordre_reparation.ordre_reparation.OrdreReparation.before_submit"
-    },
-    "Livraison Atelier": {
-        "on_submit": "maintenance_gsm.maintenance_gsm.doctype.livraison_atelier.livraison_atelier.LivraisonAtelier.update_reception_status"
-    }
 }
 
 # Scheduled Tasks

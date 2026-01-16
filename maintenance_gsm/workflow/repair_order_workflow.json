@@ -1,0 +1,81 @@
+{
+    "docstatus": 0,
+    "doctype": "Workflow",
+    "is_active": 1,
+    "modified": "2026-01-16 21:00:00.000000",
+    "name": "Repair Order Workflow",
+    "owner": "Administrator",
+    "states": [
+        {
+            "doc_status": 0,
+            "is_optional_state": 0,
+            "state": "Re\u00e7u",
+            "style": "Secondary"
+        },
+        {
+            "doc_status": 0,
+            "is_optional_state": 0,
+            "state": "Diagnostic",
+            "style": "Primary"
+        },
+        {
+            "doc_status": 0,
+            "is_optional_state": 0,
+            "state": "Devis",
+            "style": "Warning"
+        },
+        {
+            "doc_status": 0,
+            "is_optional_state": 0,
+            "state": "En cours",
+            "style": "Info"
+        },
+        {
+            "doc_status": 1,
+            "is_optional_state": 0,
+            "state": "Termin\u00e9",
+            "style": "Success"
+        },
+        {
+            "doc_status": 1,
+            "is_optional_state": 0,
+            "state": "Livr\u00e9",
+            "style": "Muted"
+        }
+    ],
+    "transitions": [
+        {
+            "action": "Diagnostiquer",
+            "allowed": "GSM Technician",
+            "next_state": "Diagnostic",
+            "state": "Re\u00e7u"
+        },
+        {
+            "action": "Etablir Devis",
+            "allowed": "Workshop Manager",
+            "next_state": "Devis",
+            "state": "Diagnostic"
+        },
+        {
+            "action": "Approuver Devis",
+            "allowed": "Workshop Manager",
+            "next_state": "En cours",
+            "state": "Devis"
+        },
+        {
+            "action": "Terminer R\u00e9paration",
+            "allowed": "GSM Technician",
+            "next_state": "Termin\u00e9",
+            "state": "En cours"
+        },
+        {
+            "action": "Livrer",
+            "allowed": "GSM Receptionist",
+            "next_state": "Livr\u00e9",
+            "state": "Termin\u00e9"
+        }
+    ],
+    "workflow_name": "Repair Order Workflow",
+    "workflow_state_field": "status",
+    "document_type": "Repair Order"
+}

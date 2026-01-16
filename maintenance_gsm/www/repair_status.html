@@ -1,0 +1,34 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+<div class="repair-status-container" style="max-width: 600px; margin: 50px auto; padding: 20px; border: 1px solid #ddd; border-radius: 8px; background: #fff;">
+	<h1 style="text-align: center; color: #2c3e50;">Suivi de R\u00e9paration GSM</h1>
+	
+	<form action="/repair-status" method="GET" style="margin-top: 30px;">
+		<div class="form-group">
+			<label for="imei" style="font-weight: bold; display: block; margin-bottom: 10px;">Entrez votre IMEI :</label>
+			<input type="text" name="imei" id="imei" class="form-control" placeholder="15 chiffres" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+		</div>
+		<button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 20px; padding: 12px; background-color: #3498db; border: none; color: white; border-radius: 4px; font-size: 16px; cursor: pointer;">V\u00e9rifier le statut</button>
+	</form>
+
+	{% if imei %}
+		<div class="result" style="margin-top: 40px; padding: 20px; border-top: 2px solid #eee;">
+			{% if device_found %}
+				<h3 style="color: #27ae60;">Appareil : {{ imei }}</h3>
+				<p><strong>Statut de l'appareil :</strong> {{ status }}</p>
+				{% if ro_status %}
+					<div style="background: #f8f9fa; padding: 15px; border-radius: 4px; margin-top: 15px;">
+						<p><strong>Dernier Ordre de R\u00e9paration :</strong> {{ ro_status }}</p>
+						<p><strong>Priorit\u00e9 :</strong> {{ priority }}</p>
+					</div>
+				{% else %}
+					<p>Aucun ordre de r\u00e9paration en cours.</p>
+				{% endif %}
+			{% else %}
+				<p style="color: #e74c3c; font-weight: bold;">{{ error }}</p>
+			{% endif %}
+		</div>
+	{% endif %}
+</div>
+{% endblock %}

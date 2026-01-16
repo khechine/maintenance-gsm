@@ -1,0 +1,97 @@
+{
+    "actions": [],
+    "allow_copy": 0,
+    "allow_events_in_timeline": 0,
+    "allow_guest_to_view": 0,
+    "allow_import": 0,
+    "allow_rename": 0,
+    "autoname": "RO-.#####",
+    "creation": "2026-01-16 21:00:00.000000",
+    "doctype": "DocType",
+    "document_type": "",
+    "editable_grid": 1,
+    "engine": "InnoDB",
+    "field_order": [
+        "device",
+        "technician",
+        "priority",
+        "status",
+        "opened_on",
+        "closed_on",
+        "internal_notes"
+    ],
+    "fields": [
+        {
+            "fieldname": "device",
+            "fieldtype": "Link",
+            "in_list_view": 1,
+            "label": "Appareil",
+            "options": "Appareil",
+            "reqd": 1
+        },
+        {
+            "fieldname": "technician",
+            "fieldtype": "Link",
+            "in_list_view": 1,
+            "label": "Technicien",
+            "options": "Employee"
+        },
+        {
+            "fieldname": "priority",
+            "fieldtype": "Select",
+            "in_list_view": 1,
+            "label": "Priorit\u00e9",
+            "options": "Low\nMedium\nHigh",
+            "default": "Medium"
+        },
+        {
+            "fieldname": "status",
+            "fieldtype": "Select",
+            "in_list_view": 1,
+            "label": "Statut",
+            "options": "Re\u00e7u\nDiagnostic\nDevis\nEn cours\nTermin\u00e9\nLivr\u00e9",
+            "default": "Re\u00e7u"
+        },
+        {
+            "fieldname": "opened_on",
+            "fieldtype": "Datetime",
+            "label": "Ouvert le",
+            "default": "Now"
+        },
+        {
+            "fieldname": "closed_on",
+            "fieldtype": "Datetime",
+            "label": "Ferm\u00e9 le"
+        },
+        {
+            "fieldname": "internal_notes",
+            "fieldtype": "Text",
+            "label": "Notes internes"
+        }
+    ],
+    "index_web_pages_for_search": 1,
+    "links": [],
+    "modified": "2026-01-16 21:00:00.000000",
+    "modified_by": "Administrator",
+    "module": "Maintenance GSM",
+    "name": "Repair Order",
+    "naming_rule": "Expression (old style)",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "System Manager",
+            "share": 1,
+            "write": 1
+        }
+    ],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "track_changes": 1
+}

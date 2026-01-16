@@ -1,0 +1,81 @@
+{
+    "actions": [],
+    "allow_copy": 0,
+    "allow_events_in_timeline": 0,
+    "allow_guest_to_view": 0,
+    "allow_import": 0,
+    "allow_rename": 0,
+    "autoname": "QUOT-.#####",
+    "creation": "2026-01-16 21:00:00.000000",
+    "doctype": "DocType",
+    "document_type": "",
+    "editable_grid": 1,
+    "engine": "InnoDB",
+    "field_order": [
+        "repair_order",
+        "labor_cost",
+        "spare_parts",
+        "total_estimated_cost",
+        "customer_approval"
+    ],
+    "fields": [
+        {
+            "fieldname": "repair_order",
+            "fieldtype": "Link",
+            "in_list_view": 1,
+            "label": "Ordre de r\u00e9paration",
+            "options": "Repair Order",
+            "reqd": 1
+        },
+        {
+            "fieldname": "labor_cost",
+            "fieldtype": "Currency",
+            "in_list_view": 1,
+            "label": "Co\u00fbt main d'\u0153uvre"
+        },
+        {
+            "fieldname": "spare_parts",
+            "fieldtype": "Table",
+            "label": "Pi\u00e8ces de rechange",
+            "options": "Quotation Spare Part"
+        },
+        {
+            "fieldname": "total_estimated_cost",
+            "fieldtype": "Currency",
+            "in_list_view": 1,
+            "label": "Co\u00fbt total estim\u00e9",
+            "read_only": 1
+        },
+        {
+            "fieldname": "customer_approval",
+            "fieldtype": "Check",
+            "in_list_view": 1,
+            "label": "Approbation client"
+        }
+    ],
+    "index_web_pages_for_search": 1,
+    "links": [],
+    "modified": "2026-01-16 21:00:00.000000",
+    "modified_by": "Administrator",
+    "module": "Maintenance GSM",
+    "name": "Repair Quotation",
+    "naming_rule": "Expression (old style)",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "System Manager",
+            "share": 1,
+            "write": 1
+        }
+    ],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "track_changes": 1
+}
