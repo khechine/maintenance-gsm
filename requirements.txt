@@ -1,2 +1,3 @@
-frappe==15.71.0
-erpnext==15.65.4
+# Required dependencies for maintenance_gsm
+# Frappe and ERPNext are usually handled by the bench environment.
+# Only add additional python packages here.
